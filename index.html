@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1>Question form</h1>
+      <p class="lede">Edit the prompts below, add or remove rows, then submit. Nothing is sent to a server—your answers stay in the browser.</p>
+    </header>
+
+    <main class="card">
+      <form id="question-form" novalidate>
+        <div id="questions" class="questions" aria-live="polite"></div>
+
+        <div class="toolbar">
+          <button type="button" id="add-question" class="btn btn-secondary">Add question</button>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn btn-primary">Submit answers</button>
+        </div>
+      </form>
+    </main>
+
+    <section id="result-panel" class="card result hidden" hidden>
+      <h2>Submitted</h2>
+      <pre id="result-json" class="result-json"></pre>
+      <button type="button" id="dismiss-result" class="btn btn-secondary">Dismiss</button>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
